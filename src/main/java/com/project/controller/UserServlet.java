@@ -1,4 +1,11 @@
 package com.project.controller;
 
-public class UserServlet {
+import com.project.util.UrlConst;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+
+public class UserServlet extends HttpServlet {
+
 }
