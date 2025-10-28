@@ -11,7 +11,7 @@
 	<title>Edit Task</title>
 </c:if>
 <!-- Validate Task -->
-<script src='<c:url value="assets/validate/validate-create-task.js" />'></script>
+<script src='<c:url value="/assets/validate/validate-create-task.js" />'></script>
 </head>
 
 <body>

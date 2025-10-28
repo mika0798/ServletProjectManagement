@@ -11,7 +11,7 @@
 	<title>Edit Project</title>
 </c:if>
 <!-- Validate Project -->
-<script src='<c:url value="assets/validate/validate-create-project.js" />'></script>
+<script src='<c:url value="/assets/validate/validate-create-project.js" />'></script>
 </head>z
 <body>
 	<div class="container page__heading-container">
