@@ -1,10 +1,12 @@
 package com.project.entity;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
@@ -16,5 +18,4 @@ public class User {
     private String address;
     private int role_id;
     private Role role;
-
 }

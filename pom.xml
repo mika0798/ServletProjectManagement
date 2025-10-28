@@ -25,6 +25,7 @@
           <artifactId>jbcrypt</artifactId>
           <version>0.4</version>
       </dependency>
+
       <!-- Servlet API for Tomcat 9 -->
       <dependency>
           <groupId>javax.servlet</groupId>
@@ -69,6 +70,8 @@
           <artifactId>mysql-connector-j</artifactId>
           <version>8.2.0</version>
       </dependency>
+
+      <!-- Open Symphony -->
       <dependency>
           <groupId>opensymphony</groupId>
           <artifactId>sitemesh</artifactId>

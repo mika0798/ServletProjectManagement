@@ -1,13 +1,16 @@
 package com.project.entity;
 
-import java.sql.Date;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@NoArgsConstructor
+import java.sql.Date;
+
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Project {
     private int id;
     private String name;
@@ -16,4 +19,5 @@ public class Project {
     private Date end_date;
     private int created_by;
     private User user;
+
 }

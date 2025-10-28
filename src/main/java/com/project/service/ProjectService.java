@@ -23,8 +23,8 @@ public class ProjectService {
         return projectRepository.addProject(project);
     }
 
-    public boolean updateProject(Project project) {
-        return projectRepository.updateProject(project);
+    public Project updateProject(Project project) {
+        return projectRepository.updateProject(project) ? getProjectById(project.getId()) : null;
     }
 
     public boolean deleteProject(int id) {

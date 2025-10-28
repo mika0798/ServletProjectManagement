@@ -1,13 +1,16 @@
 package com.project.entity;
 
-import java.sql.Date;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@NoArgsConstructor
+import java.sql.Date;
+
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Task {
     private int id;
     private String name;
@@ -20,4 +23,5 @@ public class Task {
     private User user;
     private Project project;
     private Status status;
+
 }

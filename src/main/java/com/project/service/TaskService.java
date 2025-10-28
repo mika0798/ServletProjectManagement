@@ -36,7 +36,7 @@ public class TaskService {
         return taskRepository.addTask(task);
     }
 
-    public boolean updateTask(Task task) {
+    public Task updateTask(Task task) {
         ProjectService projectService = new ProjectService();
         Project project = projectService.getProjectById(task.getProject_id());
 
@@ -45,10 +45,10 @@ public class TaskService {
                     || task.getStart_date().before(project.getStart_date())
                     || task.getEnd_date().before(project.getStart_date())
                     || task.getEnd_date().after(project.getEnd_date())) {
-                return false;
+                return null;
             }
         }
-        return taskRepository.updateTask(task);
+        return taskRepository.updateTask(task) ? getTaskById(task.getId()) : null;
     }
 
     public boolean deleteTask(int id) {

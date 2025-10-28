@@ -1,14 +1,17 @@
 package com.project.entity;
 
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Status {
     private int id;
     private String name;
     private String description;
+
 }

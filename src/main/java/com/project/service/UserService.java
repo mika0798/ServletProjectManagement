@@ -37,8 +37,8 @@ public class UserService {
         return userRepository.addUser(user);
     }
 
-    public boolean updateUser(User user) {
-        return userRepository.updateUser(user);
+    public User updateUser(User user) {
+        return userRepository.updateUser(user) ? getUserById(user.getId()) : null;
     }
 
     public boolean deleteUser(int id) {
