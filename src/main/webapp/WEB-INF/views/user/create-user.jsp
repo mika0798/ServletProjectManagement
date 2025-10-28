@@ -11,7 +11,7 @@
 	<title>Edit User</title>
 </c:if>
 <!-- Validate User -->
-<script src='<c:url value="assets/validate/validate-create-user.js" />'></script>
+<script src='<c:url value="/assets/validate/validate-create-user.js" />'></script>
 </head>
 
 <body>

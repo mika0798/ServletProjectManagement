@@ -248,13 +248,13 @@
 	
 	<content tag="scripts">
 		<!-- Chart.js -->
-		<script src='<c:url value="assets/vendor/Chart.min.js" />'></script>
+		<script src='<c:url value="/assets/vendor/Chart.min.js" />'></script>
 		
 		<!-- App Charts JS -->
-		<script src='<c:url value="assets/js/chartjs-rounded-bar.js" />'></script>
-		<script src='<c:url value="assets/js/charts.js" />'></script>
+		<script src='<c:url value="/assets/js/chartjs-rounded-bar.js" />'></script>
+		<script src='<c:url value="/assets/js/charts.js" />'></script>
 		
 		<!-- Chart Samples -->
-		<script src='<c:url value="assets/js/page.dashboard.js" />'></script>
+		<script src='<c:url value="/assets/js/page.dashboard.js" />'></script>
 	</content>
 </body>

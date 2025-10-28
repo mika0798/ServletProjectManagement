@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <decorators defaultdir="/decorators">
-	<decorator name="web" page="layout.jsp">
-		<pattern>/*</pattern>
-	</decorator>
-	
+	<!-- Apply the login decorator to auth pages first to avoid being shadowed by /* -->
 	<decorator name="login" page="login.jsp">
 		<pattern>/sign*</pattern>
+	</decorator>
+	
+	<decorator name="web" page="layout.jsp">
+		<pattern>/*</pattern>
 	</decorator>
 </decorators>

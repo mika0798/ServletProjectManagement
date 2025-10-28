@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <!-- Validate User -->
-<script src='<c:url value="assets/validate/validate-create-user.js" />'></script>
+<script src='<c:url value="/assets/validate/validate-create-user.js" />'></script>
 </head>
 <body>
 	<h4 class="m-0">Sign up!</h4>
