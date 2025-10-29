@@ -70,7 +70,7 @@ public class UserServlet extends HttpServlet {
         User user = new User();
         user.setName(name);
         user.setEmail(email);
-        user.setPassword(PasswordUtil.encryptPassword(password));
+        user.setPassword(password);
         user.setAddress(address);
         user.setPhone(phone);
         user.setRole_id(roleId);
