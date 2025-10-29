@@ -53,7 +53,7 @@
 							</thead>
 							<tbody class="list" id="staff02">
 								<c:forEach var="task" items="${tasks}">
-									<c:if test="${login.role.name eq 'LEADER' && task.project.create_by eq login.id}">
+									<c:if test="${login.role.name eq 'LEADER' && task.project.created_by eq login.id}">
 										<tr>
 											<td>${task.name}</td>
 											<td>${task.user.email }</td>

@@ -59,8 +59,8 @@
 										<tr>
 											<td>${project.name}</td>
 											<td>${project.description}</td>
-											<td>${project.startDate}</td>
-											<td>${project.endDate}</td>
+											<td>${project.start_date}</td>
+											<td>${project.end_date}</td>
 											<td>${project.user.email }</td>
 											<td>
 												<a type="button" class="btn btn-secondary" data-toggle="tooltip" title='Edit Project'
