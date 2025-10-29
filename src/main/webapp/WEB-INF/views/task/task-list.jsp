@@ -53,20 +53,20 @@
 							</thead>
 							<tbody class="list" id="staff02">
 								<c:forEach var="task" items="${tasks}">
-									<c:if test="${login.role.name eq 'LEADER' && task.project.createBy eq login.id}">
+									<c:if test="${login.role.name eq 'LEADER' && task.project.create_by eq login.id}">
 										<tr>
 											<td>${task.name}</td>
 											<td>${task.user.email }</td>
-											<td>${task.endDate}</td>
+											<td>${task.end_date}</td>
 											<td>${task.project.name}</td>
 											<c:choose>
-													<c:when test="${task.status.name eq 'CHƯA THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'Not Started' }">
 														<td><span class="badge badge-warning">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'ĐANG THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'In Progress' }">
 														<td><span class="badge badge-primary">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'HOÀN THÀNH' }">
+													<c:when test="${task.status.name eq 'Completed' }">
 														<td><span class="badge badge-success">${task.status.name }</span></td>
 													</c:when>
 											</c:choose>
@@ -91,16 +91,16 @@
 										<tr>
 											<td>${task.name}</td>
 											<td>${task.user.email }</td>
-											<td>${task.endDate}</td>
+											<td>${task.end_date}</td>
 											<td>${task.project.name}</td>
 											<c:choose>
-													<c:when test="${task.status.name eq 'CHƯA THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'Not Started' }">
 														<td><span class="badge badge-warning">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'ĐANG THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'In Progress' }">
 														<td><span class="badge badge-primary">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'HOÀN THÀNH' }">
+													<c:when test="${task.status.name eq 'Completed' }">
 														<td><span class="badge badge-success">${task.status.name }</span></td>
 													</c:when>
 											</c:choose>
@@ -125,16 +125,16 @@
 										<tr>
 											<td>${task.name}</td>
 											<td>${task.user.email }</td>
-											<td>${task.endDate}</td>
+											<td>${task.end_date}</td>
 											<td>${task.project.name}</td>
 											<c:choose>
-													<c:when test="${task.status.name eq 'CHƯA THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'Not Started' }">
 														<td><span class="badge badge-warning">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'ĐANG THỰC HIỆN' }">
+													<c:when test="${task.status.name eq 'In Progress' }">
 														<td><span class="badge badge-primary">${task.status.name }</span></td>
 													</c:when>
-													<c:when test="${task.status.name eq 'HOÀN THÀNH' }">
+													<c:when test="${task.status.name eq 'Completed' }">
 														<td><span class="badge badge-success">${task.status.name }</span></td>
 													</c:when>
 												</c:choose>

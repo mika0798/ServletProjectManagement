@@ -78,14 +78,14 @@
 			<div class="form-group">
 				<label class="col-sm-5 control-label no-padding-right">Start Date</label>
 				<div class="col-sm-7">
-					<input type="date" class="form-control" name="startDate" value="${project.startDate }"/>
+					<input type="date" class="form-control" name="start_date" value="${project.start_date }"/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label class="col-sm-5 control-label no-padding-right">End Date</label>
 				<div class="col-sm-7">
-					<input type="date" class="form-control" name="endDate" value="${project.endDate }"/>
+					<input type="date" class="form-control" name="end_date" value="${project.end_date }"/>
 				</div>
 			</div>
 

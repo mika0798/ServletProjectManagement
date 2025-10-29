@@ -122,11 +122,11 @@
 							<c:if test="${not empty task.id }">
 								<%-- Edit User --%>
 								<c:forEach var="item" items="${projects }">
-									<c:if test="${task.projectId eq item.id }">
+									<c:if test="${task.project_id eq item.id }">
 										<option value="${item.id }" selected="selected">${item.name }</option>
 									</c:if>
 
-									<c:if test="${task.projectId ne item.id }">
+									<c:if test="${task.project_id ne item.id }">
 										<option value="${item.id }">${item.name }</option>
 									</c:if>
 								</c:forEach>
@@ -139,7 +139,7 @@
 						Date</label>
 					<div class="col-sm-7">
 						<input type="date" class="form-control" name="startDate"
-							value="${task.startDate }" disabled="disabled" />
+							value="${task.start_date }" disabled="disabled" />
 					</div>
 				</div>
 
@@ -148,16 +148,16 @@
 						Date</label>
 					<div class="col-sm-7">
 						<input type="date" class="form-control" name="endDate"
-							value="${task.endDate }" disabled="disabled" />
+							value="${task.end_date }" disabled="disabled" />
 					</div>
 				</div>
 
 				<input type="hidden" name="name" value="${task.name }">
 				<input type="hidden" name="description" value="${task.description }">
 				<input type="hidden" name="assignee" value="${task.assignee }">
-				<input type="hidden" name="projectId" value="${task.projectId }">
-				<input type="hidden" name="startDate" value="${task.startDate }">
-				<input type="hidden" name="endDate" value="${task.endDate }">
+				<input type="hidden" name="projectId" value="${task.project_id }">
+				<input type="hidden" name="startDate" value="${task.start_date }">
+				<input type="hidden" name="endDate" value="${task.end_date }">
 
 			</c:if>
 
@@ -214,18 +214,18 @@
 								<c:if test="${empty task.id}">
 									<%-- Create User --%>
 									<c:forEach var="item" items="${projects }">
-										<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>
+										<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>
 									</c:forEach>
 								</c:if>
 								<c:if test="${not empty task.id }">
 									<%-- Edit User --%>
 									<c:forEach var="item" items="${projects }">
-										<c:if test="${task.projectId eq item.id }">
-											<option value="${item.id }" selected="selected">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>
+										<c:if test="${task.project_id eq item.id }">
+											<option value="${item.id }" selected="selected">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>
 										</c:if>
 
-										<c:if test="${task.projectId ne item.id }">
-											<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>										</c:if>
+										<c:if test="${task.project_id ne item.id }">
+											<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>										</c:if>
 									</c:forEach>
 								</c:if>
 							</select>
@@ -236,25 +236,25 @@
 								<c:if test="${empty task.id}">
 									<%-- Create User --%>
 									<c:forEach var="item" items="${projects }">
-										<c:if test="${item.createBy eq login.id}">
+										<c:if test="${item.create_by eq login.id}">
 											<%-- GET USER WHO CREATED PROJECT --%>
-											<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>
+											<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>
 										</c:if>
 									</c:forEach>
 								</c:if>
 								<c:if test="${not empty task.id }">
 									<%-- Edit User --%>
 									<c:forEach var="item" items="${projects }">
-										<c:if test="${item.createBy eq login.id}">
+										<c:if test="${item.create_by eq login.id}">
 											<%-- GET USER WHO CREATED PROJECT --%>
-											<c:if test="${task.projectId eq item.id }">
-												<option value="${item.id }" selected="selected">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>
+											<c:if test="${task.project_id eq item.id }">
+												<option value="${item.id }" selected="selected">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>
 											</c:if>
 										</c:if>
-										<c:if test="${task.projectId ne item.id }">
-											<c:if test="${item.createBy eq login.id}">
+										<c:if test="${task.project_id ne item.id }">
+											<c:if test="${item.create_by eq login.id}">
 												<%-- GET LEADER WHO CREATED PROJECT --%>
-												<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.startDate }&nbsp;&nbsp;to&nbsp;&nbsp;${item.endDate })</option>
+												<option value="${item.id }">${item.name }&nbsp;&nbsp;(${item.start_date }&nbsp;&nbsp;to&nbsp;&nbsp;${item.end_date })</option>
 											</c:if>
 										</c:if>
 									</c:forEach>
@@ -268,7 +268,7 @@
 						Date</label>
 					<div class="col-sm-7">
 						<input type="date" class="form-control" name="startDate"
-							value="${task.startDate }" />
+							value="${task.start_date }" />
 					</div>
 				</div>
 
@@ -277,7 +277,7 @@
 						Date</label>
 					<div class="col-sm-7">
 						<input type="date" class="form-control" name="endDate"
-							value="${task.endDate }" />
+							value="${task.end_date }" />
 					</div>
 				</div>
 			</c:if>
@@ -295,11 +295,11 @@
 						<c:if test="${not empty task.id }">
 							<%-- Edit User --%>
 							<c:forEach var="item" items="${statuses }">
-								<c:if test="${task.statusId eq item.id }">
+								<c:if test="${task.status_id eq item.id }">
 									<option value="${item.id }" selected="selected">${item.name }
 									</option>
 								</c:if>
-								<c:if test="${task.statusId ne item.id }">
+								<c:if test="${task.status_id ne item.id }">
 									<option value="${item.id }">${item.name }</option>
 								</c:if>
 							</c:forEach>
