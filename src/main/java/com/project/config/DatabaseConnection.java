@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private static Connection connection;
     private static String Driver =  "com.mysql.cj.jdbc.Driver";
-    private static String Url = "jdbc:mysql://localhost:3307/crm";
-    private static String User = "root";
-    private static String Password = "admin123";
+    private static String Url = System.getenv("DB_URL");
+    private static String User = System.getenv("DB_USER");
+    private static String Password = System.getenv("DB_PASS");
 
     public static Connection getConnection() {
         try {
