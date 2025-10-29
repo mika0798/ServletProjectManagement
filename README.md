@@ -11,6 +11,6 @@ Demo photos:
 
 ![projectpage.png](demo-photos/projectpage.png)
 
-![userpage.png](demo-photos/userpage.png)
+![taskpage.png](demo-photos/taskpage.png)
 
 ![userpage.png](demo-photos/userpage.png)
