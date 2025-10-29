@@ -19,6 +19,8 @@ public class ProjectService {
         return projectRepository.getProjectById(id);
     }
 
+    public int getProjectCreator(int id) {return projectRepository.getProjectCreator(id);}
+
     public boolean addProject(Project project) {
         return projectRepository.addProject(project);
     }

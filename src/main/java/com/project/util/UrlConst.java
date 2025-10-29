@@ -19,7 +19,6 @@ public class UrlConst {
     // USER
     public static final String CREATE_USER = "/create-user";
     public static final String USER_LIST = "/user-list";
-    public static final String EDIT_USER = "/edit-user";
 
     // PROJECT
     public static final String CREATE_PROJECT = "/create-project";

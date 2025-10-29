@@ -84,9 +84,6 @@ public class UserServlet extends HttpServlet {
                 if (userService.addUser(user)) {
                     request.setAttribute("message","User created successfully.");
                     request.setAttribute("alert","success");
-
-                    request.setAttribute("users",userService.getAllUsers());
-                    request.getRequestDispatcher(JSPUrlConst.USER_LIST).forward(request, response);
                 } else {
                     request.setAttribute("message","User creation failed.");
                     request.setAttribute("alert","danger");
@@ -112,6 +109,11 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("roles",roleService.getAllRole());
         request.getRequestDispatcher(JSPUrlConst.CREATE_USER).forward(request, response);
 
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
     }
 
 }

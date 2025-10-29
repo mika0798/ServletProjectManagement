@@ -77,6 +77,23 @@ public class ProjectRepository {
         return null;
     }
 
+    public int getProjectCreator(int projectId) {
+        String query = QueriesConst.GET_PROJECT_CREATED_BY_ID;
+        try (Connection con = DatabaseConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query)) {
+
+            ps.setInt(1, projectId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("p.created_by");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("SQLException " + e.getMessage());
+        }
+        return 0;
+    }
+
     public boolean addProject(Project project) {
         String query = QueriesConst.INSERT_PROJECT;
         try (Connection con = DatabaseConnection.getConnection();

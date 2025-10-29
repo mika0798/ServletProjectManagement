@@ -52,7 +52,7 @@ public class QueriesConst {
     //Project
     public static final String GET_PROJECTS = """
                                               SELECT p.id, p.name, p.description, p.start_date, p.end_date, p.created_by,
-                                              u.email, u.name, u.password, u.phone, u.address, u.role_id
+                                              u.id, u.email, u.name, u.password, u.phone, u.address, u.role_id
                                               FROM project p
                                               JOIN user u ON p.created_by = u.id
                                               ORDER BY p.id
@@ -60,11 +60,17 @@ public class QueriesConst {
 
     public static final String GET_PROJECT_BY_ID = """
                                                    SELECT p.id, p.name, p.description, p.start_date, p.end_date, p.created_by,
-                                                   u.email, u.name, u.password, u.phone, u.address, u.role_id
+                                                   u.id, u.email, u.name, u.password, u.phone, u.address, u.role_id
                                                    FROM project p
                                                    JOIN user u ON p.created_by = u.id
                                                    WHERE p.id = ?
                                                    """;
+
+    public static final String GET_PROJECT_CREATED_BY_ID = """
+                                                SELECT p.created_by
+                                                FROM project p
+                                                WHERE p.id = ?
+                                               """;
 
     public static final String INSERT_PROJECT = """
                                                 INSERT INTO project (name, description, start_date, end_date, created_by)
@@ -88,9 +94,9 @@ public class QueriesConst {
     //Task
     public static final String GET_TASKS = """
                                            SELECT t.id, t.name, t.description, t.start_date, t.end_date, t.assignee, t.project_id, t.status_id,
-                                           p.name, p.description, p.start_date, p.end_date, p.created_by,
-                                           s.name, s.description,
-                                           u.email, u.name, u.password, u.phone, u.address, u.role_id
+                                           p.id, p.name, p.description, p.start_date, p.end_date, p.created_by,
+                                           s.id, s.name, s.description,
+                                           u.id, u.email, u.name, u.password, u.phone, u.address, u.role_id
                                            FROM task t
                                            JOIN project p ON t.project_id = p.id
                                            JOIN status s ON t.status_id = s.id
@@ -100,9 +106,9 @@ public class QueriesConst {
 
     public static final String GET_TASK_BY_ID = """
                                                 SELECT t.id, t.name, t.description, t.start_date, t.end_date, t.assignee, t.project_id, t.status_id,
-                                                p.name, p.description, p.start_date, p.end_date, p.created_by,
-                                                s.name, s.description,
-                                                u.email, u.name, u.password, u.phone, u.address, u.role_id
+                                                p.id, p.name, p.description, p.start_date, p.end_date, p.created_by,
+                                                s.id, s.name, s.description,
+                                                u.id, u.email, u.name, u.password, u.phone, u.address, u.role_id
                                                 FROM task t
                                                 JOIN project p ON t.project_id = p.id
                                                 JOIN status s ON t.status_id = s.id

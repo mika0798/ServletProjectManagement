@@ -31,6 +31,7 @@ public class TaskRepository {
                 task.setStatus_id(rs.getInt("t.status_id"));
 
                 User user = new User();
+                user.setId(rs.getInt("u.id"));
                 user.setName(rs.getString("u.name"));
                 user.setEmail(rs.getString("u.email"));
                 user.setPhone(rs.getString("u.phone"));
@@ -38,6 +39,7 @@ public class TaskRepository {
                 user.setRole_id(rs.getInt("u.role_id"));
 
                 Project project = new Project();
+                project.setId(rs.getInt("p.id"));
                 project.setName(rs.getString("p.name"));
                 project.setDescription(rs.getString("p.description"));
                 project.setStart_date(rs.getDate("p.start_date"));
@@ -45,6 +47,7 @@ public class TaskRepository {
                 project.setCreated_by(rs.getInt("p.created_by"));
 
                 Status status = new Status();
+                status.setId(rs.getInt("s.id"));
                 status.setName(rs.getString("s.name"));
                 status.setDescription(rs.getString("s.description"));
 
@@ -78,6 +81,7 @@ public class TaskRepository {
                 task.setStatus_id(rs.getInt("t.status_id"));
 
                 User user = new User();
+                user.setId(rs.getInt("u.id"));
                 user.setName(rs.getString("u.name"));
                 user.setEmail(rs.getString("u.email"));
                 user.setPhone(rs.getString("u.phone"));
@@ -85,6 +89,7 @@ public class TaskRepository {
                 user.setRole_id(rs.getInt("u.role_id"));
 
                 Project project = new Project();
+                project.setId(rs.getInt("p.id"));
                 project.setName(rs.getString("p.name"));
                 project.setDescription(rs.getString("p.description"));
                 project.setStart_date(rs.getDate("p.start_date"));
@@ -92,6 +97,7 @@ public class TaskRepository {
                 project.setCreated_by(rs.getInt("p.created_by"));
 
                 Status status = new Status();
+                status.setId(rs.getInt("s.id"));
                 status.setName(rs.getString("s.name"));
                 status.setDescription(rs.getString("s.description"));
 
