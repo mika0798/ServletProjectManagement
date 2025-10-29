@@ -1,5 +1,5 @@
 Live demo at https://servlet-project-management.onrender.com/
-.May take a 1-2 minutes to load due to the free tier
+.May take 1-2 minutes for resources to load up due to the Render free tier I'm using
 
 ERD:
 ![ERD.png](database/ERD.png)
